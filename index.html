@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modal</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <button id="open">Open Modal</button>
+    <div class="modal hidden">
+        <div class="modal_overlay"></div>
+        <div class="modal_content">
+            <h1>modal</h1>
+            <button>X</button>
+        </div>
+    </div>
+    <script>
+        const openButton = document.getElementById("open");
+        const modal = document.querySelector(".modal")
+        const overlay = modal.querySelector(".modal_overlay");
+        const closeBtn = modal.querySelector("button");
+        const openModal = () => {
+            modal.classList.remove("hidden");
+        }
+        const closModal = () => {
+            modal.classList.add("hidden");
+        }
+        overlay.addEventListener("click", closModal);
+        closeBtn.addEventListener("click", closModal);
+        openButton.addEventListener("click",openModal);
+    </script>
+</body>
+</html>
