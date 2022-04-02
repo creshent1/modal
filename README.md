@@ -1,2 +1,2 @@
 # modal
-https://github.com/creshent1/modal.git
+https://creshent1.github.io/modal/
